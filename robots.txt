@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rose-analytics0.github.io/roslianadwiastuti-journey/sitemap.xml
