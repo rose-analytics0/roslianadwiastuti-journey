@@ -44,9 +44,9 @@ img { max-width: 100%; display: block; }
 
 .wrap {
   width: 100%;
-  max-width: 1760px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 clamp(24px, 5vw, 72px);
+  padding: 0 clamp(24px, 5vw, 80px);
   box-sizing: border-box;
 }
 
@@ -79,9 +79,9 @@ header.site-nav {
   border-bottom: 1px solid var(--line);
 }
 .nav-inner {
-  max-width: 1760px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 16px clamp(24px, 5vw, 72px);
+  padding: 16px clamp(24px, 5vw, 80px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -273,9 +273,18 @@ details.accordion summary .meta {
   display: block;
   margin-top: 4px;
 }
+/* Title-only collapsed state: hide meta subtext until the item is opened */
+details.accordion:not([open]) summary .meta { display: none; }
 details.accordion .body {
   padding: 0 20px 22px;
   animation: accordionOpen 0.22s ease;
+}
+details.accordion .body p,
+details.accordion .body .intro,
+.block > .wrap > p.intro,
+.hero p.lede,
+.hero-dark p.lede {
+  max-width: none;
 }
 @keyframes accordionOpen {
   from { opacity: 0; transform: translateY(-4px); }
@@ -370,6 +379,23 @@ details.accordion .body ul li { margin-bottom: 6px; }
 @media (max-width: 900px) {
   .cols-2, .cols-3 { grid-template-columns: 1fr; }
 }
+
+/* ---------- Top-level category accordions (Portfolio, Recognition) ---------- */
+details.accordion.accordion-top {
+  border: none;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  margin-bottom: 0;
+}
+details.accordion.accordion-top:first-of-type { border-top: 1px solid var(--line); }
+details.accordion.accordion-top > summary {
+  padding: 22px 0;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+details.accordion.accordion-top > summary::after { font-size: 1.4rem; }
+details.accordion.accordion-top > .body { padding: 0 0 30px; }
+details.accordion.accordion-top > .body > .intro { margin-top: 0 !important; }
 
 .focus-grid {
   display: grid;
