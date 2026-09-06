@@ -191,6 +191,15 @@ nav.links a.active {
   flex-shrink: 0;
 }
 .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+.hero-photo.hero-logo {
+  width: 150px;
+  height: 150px;
+  border: none;
+  background: transparent;
+}
+@media (max-width: 640px) {
+  .hero-photo.hero-logo { width: 110px; height: 110px; }
+}
 .hero-photo .placeholder {
   font-family: var(--font-mono);
   font-size: 0.95rem;
