@@ -130,7 +130,10 @@ nav.links a.active {
     overflow: hidden;
     transition: max-height 0.25s ease;
   }
-  nav.links.open { max-height: 320px; }
+  nav.links.open {
+    max-height: calc(100vh - 58px);
+    overflow-y: auto;
+  }
   nav.links a { padding: 14px 28px; border-bottom: 1px solid var(--line); }
   .nav-toggle {
     display: block;
