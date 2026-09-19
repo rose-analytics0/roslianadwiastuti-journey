@@ -275,7 +275,7 @@ nav.links a.active {
 }
 .hero-dark p.lede {
   font-size: 1.02rem;
-  color: rgba(247, 244, 236, 0.72);
+  color: rgba(247, 244, 236, 0.85);
   max-width: 62ch;
   margin: 0 0 32px;
 }
@@ -327,6 +327,21 @@ details.accordion summary .meta {
 }
 /* Title-only collapsed state: hide meta subtext until the item is opened */
 details.accordion:not([open]) summary .meta { display: none; }
+
+/* Home Experience/Project cards: keep context + capability visible even collapsed */
+details.accordion.home-item:not([open]) summary .meta { display: block; }
+details.accordion.home-item summary .meta {
+  color: var(--slate);
+  font-size: 0.72rem;
+  text-transform: none;
+}
+details.accordion.home-item summary .meta .capability {
+  display: block;
+  margin-top: 3px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+}
 details.accordion .body {
   padding: 0 20px 22px;
   animation: accordionOpen 0.22s ease;
@@ -473,17 +488,32 @@ details.accordion.accordion-top > .body > .intro { margin-top: 0 !important; }
 }
 .timeline-item h4 {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--paper);
-  margin: 0 0 6px;
+  margin: 0 0 8px;
 }
 .timeline-item p {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   letter-spacing: 0.02em;
-  color: rgba(247, 244, 236, 0.65);
-  margin: 0;
-  line-height: 1.5;
+  color: rgba(247, 244, 236, 0.85);
+  margin: 0 0 6px;
+  line-height: 1.6;
+}
+.timeline-item p:last-child { margin-bottom: 0; }
+.timeline-item p strong { color: var(--teal-light); font-weight: 600; }
+.timeline-item p.thesis {
+  color: rgba(247, 244, 236, 0.78);
+  font-style: italic;
+  font-size: 0.68rem;
+  line-height: 1.55;
+}
+.timeline-item .stage-num {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--teal-light);
+  margin-bottom: 4px;
 }
 @media (max-width: 900px) {
   .timeline { flex-direction: column; gap: 22px; }
