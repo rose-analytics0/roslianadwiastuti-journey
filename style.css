@@ -43,10 +43,10 @@ a { color: inherit; }
 img { max-width: 100%; display: block; }
 
 .wrap {
-  width: 100%;
-  max-width: 1600px;
+  width: 94%;
+  max-width: 1880px;
   margin: 0 auto;
-  padding: 0 clamp(24px, 5vw, 80px);
+  padding: 0 clamp(16px, 2vw, 40px);
   box-sizing: border-box;
 }
 
@@ -79,9 +79,10 @@ header.site-nav {
   border-bottom: 1px solid var(--line);
 }
 .nav-inner {
-  max-width: 1600px;
+  width: 94%;
+  max-width: 1880px;
   margin: 0 auto;
-  padding: 16px clamp(24px, 5vw, 80px);
+  padding: 16px clamp(16px, 2vw, 40px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -123,9 +124,10 @@ nav.links a.active {
   color: rgba(247, 244, 236, 0.85);
 }
 .status-bar-inner {
-  max-width: 1600px;
+  width: 94%;
+  max-width: 1880px;
   margin: 0 auto;
-  padding: 9px clamp(24px, 5vw, 80px);
+  padding: 9px clamp(16px, 2vw, 40px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,7 +211,7 @@ nav.links a.active {
 
 /* ---------- Hero (dark, full-bleed, homepage) — modest photo ---------- */
 .hero-dark {
-  background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 100%);
+  background: linear-gradient(160deg, #241b16 0%, #33241d 100%);
   padding: 88px 0 80px;
 }
 .hero-dark .ref { color: var(--teal-light); }
@@ -263,6 +265,13 @@ nav.links a.active {
   color: var(--teal-light);
   letter-spacing: 0.03em;
   margin-top: 6px;
+}
+.hero-name .role-sub {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: rgba(247, 244, 236, 0.65);
+  letter-spacing: 0.03em;
+  margin-top: 4px;
 }
 .hero-dark .tagline {
   font-family: var(--font-display);
@@ -325,8 +334,8 @@ details.accordion summary .meta {
   display: block;
   margin-top: 4px;
 }
-/* Title-only collapsed state: hide meta subtext until the item is opened */
-details.accordion:not([open]) summary .meta { display: none; }
+/* Context stays visible when collapsed; only deeper detail is hidden until expanded */
+details.accordion summary .meta { display: block; }
 
 /* Home Experience/Project cards: keep context + capability visible even collapsed */
 details.accordion.home-item:not([open]) summary .meta { display: block; }
@@ -347,11 +356,12 @@ details.accordion .body {
   animation: accordionOpen 0.22s ease;
 }
 details.accordion .body p,
-details.accordion .body .intro,
 .block > .wrap > p.intro,
 .hero p.lede,
 .hero-dark p.lede {
   max-width: none;
+  text-align: justify;
+  text-align-last: left;
 }
 @keyframes accordionOpen {
   from { opacity: 0; transform: translateY(-4px); }
