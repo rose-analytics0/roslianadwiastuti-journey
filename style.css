@@ -143,7 +143,20 @@ nav.links a.active {
   gap: 8px;
   white-space: nowrap;
 }
-.status-icon { font-size: 0.8rem; line-height: 1; opacity: 0.9; }
+.status-icon {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.85;
+}
+.status-icon svg {
+  width: 13px;
+  height: 13px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .status-sep {
   width: 1px;
   height: 14px;
@@ -334,23 +347,8 @@ details.accordion summary .meta {
   display: block;
   margin-top: 4px;
 }
-/* Context stays visible when collapsed; only deeper detail is hidden until expanded */
-details.accordion summary .meta { display: block; }
-
-/* Home Experience/Project cards: keep context + capability visible even collapsed */
-details.accordion.home-item:not([open]) summary .meta { display: block; }
-details.accordion.home-item summary .meta {
-  color: var(--slate);
-  font-size: 0.72rem;
-  text-transform: none;
-}
-details.accordion.home-item summary .meta .capability {
-  display: block;
-  margin-top: 3px;
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-}
+/* Title-only collapsed state, enforced consistently site-wide */
+details.accordion:not([open]) summary .meta { display: none; }
 details.accordion .body {
   padding: 0 20px 22px;
   animation: accordionOpen 0.22s ease;
