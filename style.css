@@ -817,3 +817,51 @@ form.contact-form button {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* ============================================================
+   Portfolio page — flat, title-first index
+   Scoped additions only; nothing above this line was changed,
+   so every other page keeps its current look untouched.
+   ============================================================ */
+
+/* Container: one continuous index, not five stacked "sections" */
+.portfolio-index {
+  padding: 36px 0 64px;
+}
+
+/* Intro paragraph replaces the old big "Featured Work" hero */
+.portfolio-lede {
+  color: var(--slate);
+  font-size: 1.05rem;
+  max-width: 72ch;
+  margin: 0 0 30px;
+}
+
+/* The 5 top-level categories: same width, height, border, type,
+   "+" position and animation — just tighter vertical rhythm so
+   they read as one list instead of five separate page sections */
+.portfolio-index .accordion-top {
+  border-bottom: 1px solid var(--line);
+}
+.portfolio-index .accordion-top:first-of-type {
+  border-top: 1px solid var(--line);
+}
+.portfolio-index .accordion-top > summary {
+  padding: 15px 4px;
+  font-size: 1.05rem;
+}
+.portfolio-index .accordion-top > summary::after {
+  font-size: 1.15rem;
+}
+.portfolio-index .accordion-top > .body {
+  padding: 0 4px 24px;
+}
+.portfolio-index .accordion-top > .body > .intro {
+  margin: 0 0 20px !important;
+}
+
+/* CTA row at the bottom, kept close to the last category */
+.portfolio-cta {
+  text-align: center;
+  padding: 28px 0 4px;
+}
