@@ -203,7 +203,7 @@ nav.links a.active {
 
 /* ---------- Hero (light variant, used on inner pages) ---------- */
 .hero {
-  padding: 96px 0 64px;
+  padding: 72px 0 64px;
   border-bottom: 1px double var(--line);
 }
 .hero h1 {
