@@ -829,6 +829,79 @@ form.contact-form button {
 }
 
 /* ============================================================
+   Home page — two-column hero with a real photo, flat project
+   rows instead of cards, and a card-free tools list.
+   Additive only: nothing above this block was changed.
+   ============================================================ */
+
+/* Two-column hero, nested inside the existing .hero-dark section
+   so the dark gradient background and all .hero-name/.tagline
+   typography are kept exactly as before. */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+  padding: 0 0 48px;
+}
+.hero-split .hero-text .tagline { margin: 18px 0 0; }
+.hero-photo-frame {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid rgba(247, 244, 236, 0.18);
+  background: rgba(247, 244, 236, 0.05);
+}
+.hero-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 900px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 0 0 40px;
+  }
+  .hero-photo-frame { order: -1; aspect-ratio: 4 / 3; }
+}
+
+/* Technical label + explanation pairs — used for spreadsheet
+   functions and for tool groupings. No bullets, no dashes;
+   hierarchy comes from type weight and spacing only. */
+.fn-name {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: var(--navy);
+  margin: 18px 0 4px;
+}
+.fn-name:first-child { margin-top: 0; }
+.fn-desc {
+  color: var(--ink);
+  margin: 0;
+}
+
+/* Subtitle under a project row title — always visible, not part
+   of the collapsible body and not the auto-hiding .meta tag. */
+.project-sub {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--slate);
+  margin: -8px 0 0;
+}
+
+/* Homepage-only overrides: wide, left-aligned copy, no narrow
+   justified columns inside expanded rows. */
+.home .accordion .body p,
+.home .fn-desc {
+  max-width: none;
+  text-align: left;
+}
+
+/* ============================================================
    Portfolio page — flat, title-first index
    Scoped additions only; nothing above this line was changed,
    so every other page keeps its current look untouched.
