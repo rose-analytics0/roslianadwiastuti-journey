@@ -558,6 +558,16 @@ details.accordion.accordion-top > .body > .intro { margin-top: 0 !important; }
 }
 .data-flow strong { color: var(--teal-light); }
 
+/* Light-background version of the same flow line, used outside hero-dark */
+.flow-line {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  color: var(--navy);
+  margin: 0 0 22px;
+}
+.flow-line strong { color: var(--teal); }
+
 .focus-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
