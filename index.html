@@ -26,25 +26,6 @@
   </div>
 </header>
 
-<div class="status-bar">
-  <div class="status-bar-inner">
-    <div class="status-item status-date">
-      <span class="status-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>
-      <span id="status-date-text">Wednesday, 10 September 2026</span>
-    </div>
-    <div class="status-sep"></div>
-    <div class="status-item status-time">
-      <span class="status-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 16 14"></polyline></svg></span>
-      <strong id="status-time-text">00:00:00</strong>
-      <span class="status-tz">UTC+7</span>
-    </div>
-    <div class="status-sep"></div>
-    <div class="status-item status-location">
-      <span class="status-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-7.5-7-12a7 7 0 0 1 14 0c0 4.5-7 12-7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span>
-      <span class="status-location-text"><span>Tangerang Selatan</span><span>Indonesia</span></span>
-    </div>
-  </div>
-</div>
 
 <!-- ============================================================
      HERO + MY JOURNEY (dark hero, preserved background)
@@ -54,11 +35,8 @@
 
     <div class="hero-profile-row">
       <div class="hero-photo hero-photo-profile">
-        <!-- No photo file has been provided yet, so this shows initials as a
-             visible placeholder. Replace the whole <img> tag below with your
-             real photo once you share the file, e.g.:
-             <img src="assets/rosliana-photo.jpg" alt="Rosliana Dwi Astuti" loading="lazy"> -->
         <span class="placeholder">RDA</span>
+        <img src="logo.png" alt="Rosliana Dwi Astuti" loading="lazy" onerror="this.style.display='none'">
       </div>
       <div class="hero-name">
         <h1>Rosliana Dwi Astuti</h1>
@@ -72,42 +50,54 @@
 
       <div class="timeline-item">
         <h4><span class="stage-num">01</span>Accounting Foundation</h4>
-        <p>Accounting Graduate</p>
-        <p class="thesis">Thesis Research: &ldquo;Analysis of the Application of Machine Learning Based Digital Audit for Fraud Detection: An Empirical Study Using Simulated Digital Financial Transaction Data.&rdquo;</p>
+        <ul>
+          <li>Accounting Graduate</li>
+          <li class="thesis">Thesis Research: &ldquo;Analysis of the Application of Machine Learning Based Digital Audit for Fraud Detection: An Empirical Study Using Simulated Digital Financial Transaction Data.&rdquo;</li>
+        </ul>
       </div>
 
       <div class="timeline-item">
         <h4><span class="stage-num">02</span>Production Operations</h4>
-        <p>Freelance &middot; International Client Orders</p>
-        <p>8+ Years &middot; ~4,000 Units/Cycle</p>
-        <p>Production &middot; Quality Inspection &middot; Documentation &middot; Order-Related Data</p>
+        <ul>
+          <li>Freelance, International Client Orders</li>
+          <li>8+ Years, ~4,000 Units/Cycle</li>
+          <li>Production, Quality Inspection, Documentation, Order-Related Data</li>
+        </ul>
       </div>
 
       <div class="timeline-item">
         <h4><span class="stage-num">03</span>Inventory Control</h4>
-        <p>Full-time &middot; Retail Operations</p>
-        <p>Stock Accuracy &middot; Reconciliation &middot; Verification &middot; Discrepancy Investigation</p>
+        <ul>
+          <li>Full-time, Retail Operations</li>
+          <li>Stock Accuracy, Reconciliation, Verification, Discrepancy Investigation</li>
+        </ul>
       </div>
 
       <div class="timeline-item">
         <h4><span class="stage-num">04</span>Data Analytics</h4>
-        <p>Data Processing &middot; Data Engineering</p>
-        <p>Forecasting &middot; Clustering &middot; Visualization &middot; Dashboards</p>
-        <p>50,000 Transaction Records &middot; 119,390 Hotel Booking Records</p>
-        <p>Excel &middot; Google Sheets &middot; SQL &middot; Python &middot; Tableau</p>
+        <ul>
+          <li>Data Processing, Data Engineering</li>
+          <li>Forecasting, Clustering, Visualization, Dashboards</li>
+          <li>50,000 Transaction Records, 119,390 Hotel Booking Records</li>
+          <li>Excel, Google Sheets, SQL, Python, Tableau</li>
+        </ul>
       </div>
 
       <div class="timeline-item">
         <h4><span class="stage-num">05</span>External Auditor</h4>
-        <p>Full-time &middot; 11 Companies &middot; 6 Industries</p>
-        <p>Verification &middot; Vouching &middot; Tracing &middot; Reconciliation &middot; Observation</p>
-        <p>Construction &middot; Media &middot; Trading &middot; Cooperatives &middot; Services &middot; Education</p>
+        <ul>
+          <li>Full-time, 11 Companies, 6 Industries</li>
+          <li>Verification, Vouching, Tracing, Reconciliation, Observation</li>
+          <li>Construction, Media, Trading, Cooperatives, Services, Education</li>
+        </ul>
       </div>
 
       <div class="timeline-item">
         <h4><span class="stage-num">06</span>Current Focus</h4>
-        <p>Data Processing &middot; Data Entry &middot; Data Extraction &middot; Data Management</p>
-        <p>B2B Order Data &middot; Interactive Stock Views &middot; Inventory Tracking &middot; Price Comparison &middot; KPI</p>
+        <ul>
+          <li>Data Processing, Data Entry, Data Extraction, Data Management</li>
+          <li>B2B Order Data, Interactive Stock Views, Inventory Tracking, Price Comparison, KPI</li>
+        </ul>
       </div>
 
     </div>
@@ -206,8 +196,11 @@
     <div class="exp-group">
       <div class="exp-category">Spreadsheet &amp; Data Processing</div>
       <div class="exp-items">
-        <p class="fn-name" style="margin-top:0;">Microsoft Excel &middot; Google Sheets</p>
-        <p class="fn-desc">Data Entry &middot; Data Cleaning &middot; Data Extraction &middot; Data Validation &middot; Data Standardization &middot; Reconciliation &middot; Business Rules &middot; Dynamic Views</p>
+        <div class="tag-row" style="margin-top:0;">
+          <span class="tag">Microsoft Excel</span>
+          <span class="tag">Google Sheets</span>
+        </div>
+        <p class="fn-desc">Data Entry, Data Cleaning, Data Extraction, Data Validation, Data Standardization, Reconciliation, Business Rules, Dynamic Views</p>
       </div>
     </div>
 
@@ -215,25 +208,48 @@
       <div class="exp-category">Data Analytics</div>
       <div class="exp-items">
         <p class="fn-name" style="margin-top:0;">Python</p>
-        <p class="fn-desc">Pandas &middot; NumPy &middot; Matplotlib &middot; Seaborn &middot; Google Colab</p>
+        <div class="tag-row" style="margin-top:0;">
+          <span class="tag">Pandas</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">Matplotlib</span>
+          <span class="tag">Seaborn</span>
+          <span class="tag">Google Colab</span>
+        </div>
+
         <p class="fn-name">SQL</p>
-        <p class="fn-desc">DBeaver &middot; Window Functions &middot; Joins &middot; CTEs &middot; Aggregate Functions</p>
+        <div class="tag-row" style="margin-top:0;">
+          <span class="tag">DBeaver</span>
+        </div>
+        <p class="fn-desc">Window Functions, Joins, CTEs, Aggregate Functions</p>
+
         <p class="fn-name">Tableau</p>
-        <p class="fn-desc">LOD Expressions &middot; Table Calculations &middot; Forecasting &middot; Trend Lines &middot; Cluster Analysis</p>
+        <p class="fn-desc">LOD Expressions, Table Calculations, Forecasting, Trend Lines, Cluster Analysis</p>
       </div>
     </div>
 
     <div class="exp-group">
       <div class="exp-category">Accounting &amp; Audit</div>
       <div class="exp-items">
-        <p class="fn-name" style="margin-top:0;">Accurate Accounting &middot; ATLAS</p>
+        <div class="tag-row" style="margin-top:0;">
+          <span class="tag">Accurate Accounting</span>
+          <span class="tag">ATLAS</span>
+        </div>
       </div>
     </div>
 
     <div class="exp-group">
       <div class="exp-category">Process &amp; Collaboration</div>
       <div class="exp-items">
-        <p class="fn-name" style="margin-top:0;">Microsoft Office &middot; Google Drive &middot; GitHub &middot; Notion &middot; Trello &middot; Slack &middot; Calendly &middot; draw.io</p>
+        <div class="tag-row" style="margin-top:0;">
+          <span class="tag">Microsoft Office</span>
+          <span class="tag">Google Drive</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">Notion</span>
+          <span class="tag">Trello</span>
+          <span class="tag">Slack</span>
+          <span class="tag">Calendly</span>
+          <span class="tag">draw.io</span>
+        </div>
       </div>
     </div>
   </div>
@@ -244,10 +260,30 @@
      ============================================================ -->
 <section class="block" style="border-top:1px solid var(--line);">
   <div class="wrap" style="text-align:center; padding:20px 0;">
-    <p style="font-family:var(--font-display); font-size:1.3rem; color:var(--navy); margin:0 auto 26px;">Open to projects, freelance work, and professional opportunities.</p>
+    <p class="cta-text" style="font-family:var(--font-display); font-size:1.3rem; color:var(--navy);">Open to projects, freelance work, and professional opportunities.</p>
     <a href="contact.html" class="btn btn-primary">Let&rsquo;s Connect &rarr;</a>
   </div>
 </section>
+
+<div class="status-bar">
+  <div class="status-bar-inner">
+    <div class="status-item status-date">
+      <span class="status-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>
+      <span id="status-date-text">Wednesday, 10 September 2026</span>
+    </div>
+    <div class="status-sep"></div>
+    <div class="status-item status-time">
+      <span class="status-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 16 14"></polyline></svg></span>
+      <strong id="status-time-text">00:00:00</strong>
+      <span class="status-tz">UTC+7</span>
+    </div>
+    <div class="status-sep"></div>
+    <div class="status-item status-location">
+      <span class="status-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-7.5-7-12a7 7 0 0 1 14 0c0 4.5-7 12-7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span>
+      <span class="status-location-text"><span>Tangerang Selatan</span><span>Indonesia</span></span>
+    </div>
+  </div>
+</div>
 
 <footer>
   <div class="wrap foot-inner">
