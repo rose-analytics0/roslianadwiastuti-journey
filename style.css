@@ -112,8 +112,8 @@ nav.links a {
 }
 nav.links a:hover,
 nav.links a.active {
-  color: var(--navy);
-  border-color: var(--amber);
+  color: var(--teal);
+  border-color: var(--teal);
 }
 .nav-toggle { display: none; }
 
@@ -420,7 +420,7 @@ details.accordion .body ul li { margin-bottom: 6px; }
 }
 .exp-group {
   display: grid;
-  grid-template-columns: 190px 1fr;
+  grid-template-columns: 220px 1fr;
   gap: 22px;
   padding: 28px 0;
   border-top: 1px solid var(--line);
@@ -429,11 +429,14 @@ details.accordion .body ul li { margin-bottom: 6px; }
 .exp-group:first-of-type { border-top: 1px solid var(--line); }
 .exp-category {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   color: var(--teal);
   padding-top: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .exp-items { display: flex; flex-direction: column; gap: 10px; }
 .exp-items details.accordion .body details.accordion {
@@ -864,26 +867,35 @@ form.contact-form button {
 /* Profile-intro row: circular photo on the left, name/headline/
    tagline stacked beside it on the right — left-aligned, not
    centered underneath. Nested inside the existing .hero-dark
-   section so the dark gradient background is unchanged. */
+   section so the dark gradient background is unchanged. Spacing
+   between name/role/tagline is kept tight on purpose. */
 .hero-profile-row {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
   flex-wrap: wrap;
 }
 .hero-photo-profile {
   width: 128px;
   height: 128px;
   flex-shrink: 0;
+  position: relative;
+}
+.hero-photo-profile img {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
 }
 .hero-profile-row .hero-name { min-width: 260px; }
+.hero-profile-row .hero-name h1 { margin: 0; }
+.hero-profile-row .hero-name .role { margin-top: 4px; }
 .profile-tagline {
   font-family: var(--font-body);
   font-style: italic;
   font-size: 1.02rem;
-  color: rgba(247, 244, 236, 0.85);
+  color: #E0E0E0;
   line-height: 1.6;
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   max-width: none;
 }
 @media (max-width: 640px) {
@@ -900,12 +912,13 @@ form.contact-form button {
   font-size: 0.85rem;
   letter-spacing: 0.02em;
   color: var(--navy);
-  margin: 18px 0 4px;
+  margin: 18px 0 8px;
 }
 .fn-name:first-child { margin-top: 0; }
 .fn-desc {
   color: var(--ink);
   margin: 0;
+  line-height: 1.7;
 }
 
 /* Subtitle under a project row title — always visible, not part
@@ -918,11 +931,68 @@ form.contact-form button {
 }
 
 /* Homepage-only overrides: wide, left-aligned copy, no narrow
-   justified columns inside expanded rows. */
+   justified columns inside expanded rows; tighter section rhythm
+   so the page doesn't trail off into oversized empty space. */
 .home .accordion .body p,
 .home .fn-desc {
   max-width: none;
   text-align: left;
+}
+.home .block { padding: 48px 0; }
+.home .hero-dark { padding: 56px 0 44px; }
+.home footer { padding: 28px 0 40px; }
+
+/* Timeline: always vertical on the home page (not just on mobile)
+   so every stage has room to breathe, with proper bullet points
+   instead of middot-separated runs, larger text, and a lighter,
+   more readable color against the dark background. */
+.home .timeline {
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 14px;
+}
+.home .timeline-item {
+  padding: 0 0 0 22px;
+  border-top: none;
+  border-left: 2px solid var(--teal-light);
+}
+.home .timeline-item::before { top: 2px; left: -6px; }
+.home .timeline-item h4 { font-size: 1.15rem; }
+.home .timeline-item ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.home .timeline-item ul li {
+  position: relative;
+  padding-left: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: #E0E0E0;
+  line-height: 1.7;
+  margin: 0 0 8px;
+}
+.home .timeline-item ul li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: var(--teal-light);
+}
+.home .timeline-item ul li:last-child { margin-bottom: 0; }
+.home .timeline-item ul li.thesis {
+  font-style: italic;
+  color: #CCCCCC;
+  font-size: 0.8rem;
+}
+.home .timeline-item ul li.thesis::before { content: ''; }
+
+/* CTA sentence: a controlled width plus balanced wrapping so it
+   never strands a single word alone on the last line. */
+.home .cta-text {
+  max-width: 560px;
+  margin: 0 auto 22px;
+  text-wrap: balance;
 }
 
 /* ============================================================
