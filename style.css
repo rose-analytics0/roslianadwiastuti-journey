@@ -558,6 +558,32 @@ details.accordion.accordion-top > .body > .intro { margin-top: 0 !important; }
 }
 .data-flow strong { color: var(--teal-light); }
 
+/* Compact tool logo + label chips (Tools & Capabilities). Icons are
+   official single-path marks, recolored via currentColor so they
+   match the site's ink/slate palette instead of brand colors. */
+.tool-chips {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2px 0 10px;
+}
+.tool-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0 20px 8px 0;
+}
+.tool-chip span {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink);
+}
+.tool-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  fill: var(--slate);
+}
+
 /* Light-background version of the same flow line, used outside hero-dark */
 .flow-line {
   font-family: var(--font-mono);
