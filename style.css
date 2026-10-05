@@ -517,12 +517,13 @@ details.accordion.accordion-top > .body > .intro { margin-top: 0 !important; }
   line-height: 1.55;
 }
 .timeline-item .stage-num {
-  display: block;
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.78rem;
+  font-weight: 600;
   color: var(--teal-light);
-  margin-bottom: 4px;
+  margin-right: 6px;
 }
+.timeline-item .stage-num::after { content: '\2014'; margin-left: 6px; }
 @media (max-width: 900px) {
   .timeline { flex-direction: column; gap: 22px; }
   .timeline-item {
@@ -939,7 +940,7 @@ form.contact-form button {
 .portfolio-lede {
   color: var(--slate);
   font-size: 1.05rem;
-  max-width: 72ch;
+  max-width: none;
   margin: 0 0 30px;
 }
 
