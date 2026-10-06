@@ -996,6 +996,66 @@ form.contact-form button {
 }
 
 /* ============================================================
+   Experience page — filter pills, numbered entries, group labels
+   ============================================================ */
+
+.filter-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 26px 0 38px;
+}
+.filter-btn {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--slate);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+.filter-btn:hover { border-color: var(--teal); color: var(--teal); }
+.filter-btn.active { background: var(--navy); border-color: var(--navy); color: var(--paper); }
+
+/* Small numeral prefix for accordion-top summaries (01, 02, 03...) */
+.entry-num {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--teal);
+  margin-right: 10px;
+}
+
+/* Sub-category label inside a section, e.g. "01 — Excel & Data Operations" */
+.group-heading {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 40px 0 14px;
+}
+.group-heading:first-of-type { margin-top: 0; }
+.group-heading .entry-num { color: var(--teal); }
+
+/* Small, non-raw-URL evidence link ("Project Files →") */
+.evidence-link {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--teal);
+  text-decoration: none;
+  border-bottom: 1px solid var(--teal);
+  padding-bottom: 2px;
+  margin: 2px 0 0;
+}
+
+/* ============================================================
    Portfolio page — flat, title-first index
    Scoped additions only; nothing above this line was changed,
    so every other page keeps its current look untouched.
