@@ -929,6 +929,13 @@ form.contact-form button {
   color: var(--slate);
   margin: -8px 0 0;
 }
+/* Inside a card-style accordion (not accordion-top), give the
+   subtitle the same left/right padding as the summary and body
+   so the whole card lines up on one consistent edge. */
+.accordion:not(.accordion-top) > .project-sub {
+  padding: 0 20px;
+  margin-top: -6px;
+}
 
 /* Homepage-only overrides: wide, left-aligned copy, no narrow
    justified columns inside expanded rows; tighter section rhythm
